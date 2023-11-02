@@ -33,11 +33,18 @@ function buttonClicked(argButtonName) {
     );
     if (argPlayerMove == "papier" && argComputerMove == "kamień") {
       printMessage("Wygrywasz!");
+    } else if (argPlayerMove == "kamień" && argComputerMove == "nozyce") {
+      printMessage("Wygrywasz!");
+    } else if (argPlayerMove == "nozyce" && argComputerMove == "papier") {
+      printMessage("Wygrywasz!");
+    } else if (argPlayerMove == argComputerMove) {
+      printMessage("Remis!");
     } else {
       printMessage("Przegrywasz :(");
     }
     printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
   }
+
   console.log("ruch gracza to: " + playerMove);
   randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log("wylosowana liczba to: " + randomNumber);
